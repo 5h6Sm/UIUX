@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 자바스크립트 예제</title>
+</head>
+<body>
+    <script>
+        function dogsAge(age){
+            return age*7;
+        }
+        var myDogAge = dogsAge(4);
+        function rectangleArea(width, height){
+            var area = width * height;
+            return area;
+        }
+        var rectArea = rectangleArea(3, 4);
+
+        function addUp(numArray){
+            var total = 0;
+            for(var i of numArray){
+                total += i;
+            }
+            return total;
+        }
+        var theTotal = addUp([1, 3, 5, 9]);
+
+        function getAvatar(points){
+            var avatar;
+            if(points<100){
+                avatar = "쥐";
+            }else if (points > 100 && points < 1000){
+                avatar = "고양이";
+            }else {
+                avatar = "원숭이";
+            }
+            return avatar;
+        }
+        var myAvatar = getAvatar(335);
+
+        function triangle(width, height){
+            return (width*height)/2;
+        }
+        var triArea = triangle(3, 4);
+
+        function avatar2(points){
+            if(points<100){
+                avatar = "쥐";
+            }else if (points > 100 && points < 1000){
+                avatar = "고양이";
+            }else {
+                avatar = "원숭이";
+            }
+            return avatar2;
+        }
+        var yourAvatar = avatar2(1500);
+
+        
+
+        // window.onload = outputResults
+        window.onload = function outputResults() {
+        var output = document.getElementById("output");
+        output.innerHTML = "강아지 나이 : " + myDogAge + "<br>사각형 면적 : " + rectArea +
+        "<br>합계 : " + theTotal + "<br>내 아바타 : " + myAvatar;
+        }
+
+    </script>
+
+    <div id="output"></div>
+</body>
+</html>

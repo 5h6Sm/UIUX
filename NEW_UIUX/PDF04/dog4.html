@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var fido = {
+            name : "fido",
+            weight : 40,
+            greed : "Mixed",
+            loves : ["walks", "fetching balls"]
+        };
+
+        if(fido.weight > 25){
+            alert("WOOF");
+        }else{
+            alert("yip");
+        }
+
+        fido.weight = 27;
+        fido.loves.push("chewing bones");
+
+        var likes = fido.loves;
+        var likesString = "Fido likes";
+
+        for(var i = 0; i<likes.length; i++){
+            likesString += " " + likes[i];
+        }
+        alert(likesString);
+
+        function bark(dog){
+            if(dog.weight > 25){
+                alert("WOOF");
+            }else{
+                alert("yip");
+            }
+        }
+    </script>
+    
+</body>
+</html>

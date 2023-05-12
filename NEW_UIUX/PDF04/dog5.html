@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Dog(name, breed, weight){
+            this.name = name;
+            this.breed = breed;
+            this.weight = weight;
+            this.bark = function(){   
+                if(this.weight > 25){
+                    console.log(this.name + "가 멍멍 짖습니다");
+                }else{
+                    console.log(this.name + "깽깽 거립니다!")
+                }
+            };
+        }
+        var fido = new Dog("파이도", "잡종", 38);
+        var tiny = new Dog("타이니", "치와와", 8);
+        var chifford = new Dog("클리포드", "푸들", 65);
+
+        fido.bark();
+        tiny.bark();
+        chifford.bark();
+
+        function stud(name, score, grade){
+            this.name = name;
+            this.score = score;
+            this.grade = grade;
+
+            this.comment = function(){
+                console.log(this.name + " 학생의 점수는 " + this.score + "이고 등급은 " + this.grade + "입니다.");
+            };
+        }
+
+        var stud1 = new stud("윤선희", 98, "A");
+        stud1.comment();
+
+
+            
+            
+    </script>
+    document.write("생성자 test");
+</body>
+</html>
